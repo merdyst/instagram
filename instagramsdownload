@@ -1,6 +1,6 @@
 from selenium import webdriver
 import time
-import time, urllib.request
+import urllib.request
 driver = webdriver.Chrome()
 driver.get("https://www.instagram.com/wowshack/")
 # scroll to the bottom of the page
@@ -13,7 +13,6 @@ while(match==False):
     if lastCount==lenOfPage:
         match=True
 
-# find all links on the page and if they match '/p' append to list named posts
 posts = []
 links = driver.find_elements_by_tag_name('a')
 for link in links:
